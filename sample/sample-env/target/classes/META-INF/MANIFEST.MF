@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Built-By: U586828
+Build-Jdk: 11.0.7
+Implementation-Title: sample-env
+Implementation-Version: 1.0.0-SNAPSHOT
+Implementation-Vendor-Id: com.example.sample
+Implementation-Vendor: TERASOLUNA Framework Team
+Created-By: Maven Integration for Eclipse
+
