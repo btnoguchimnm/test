@@ -11,7 +11,7 @@
     <version>5.4.1.RELEASE</version>
   </parent>
 
-  <name>TERASOLUNA Server Framework for Java (5.x) Web Blank Multi Project (MyBatis3)</name>
+  <name>sample</name>
   <description>Web Blank Multi Project (MyBatis3) using TERASOLUNA Server Framework for Java (5.x)</description>
   <url>http://terasoluna.org</url>
   <inceptionYear>2014</inceptionYear>
