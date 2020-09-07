@@ -212,8 +212,9 @@
     <!-- Sonar -->
     <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
     <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
-    <sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/../target/jacoco.exec</sonar.coverage.jacoco.xmlReportPaths>
+    <sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/target/jacoco.exec</sonar.coverage.jacoco.xmlReportPaths>
     <sonar.language>java</sonar.language>
+    <sonar.projectKey>com.example.sample:sample_master</sonar.projectKey>
   </properties>
 
   <modules>
