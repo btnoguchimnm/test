@@ -1,0 +1,39 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                // Get some code from a GitHub repository
+                checkout scm: ([
+                    $class: 'GitSCM',
+                    userRemoteConfigs: [[credentialsId: 'f74ba7f3-cb04-400e-93a6-6035906e4eb5',
+                    url: 'https://github.com/btnoguchimnm/test.git']],
+                    branches: [[name: 'refs/heads/master']]
+                ])
+                
+                withSonarQubeEnv('SonarQube') {
+                    bat "C:/apache-maven-3.6.3/bin/mvn clean jacoco:prepare-agent test -f sample/pom.xml jacoco:report sonar:sonar "
+                }
+                
+            }
+        }
+        //stage("Quality Gate") {
+        //    steps {
+        //        timeout(time: 1, unit: 'HOURS') {
+        //            waitForQualityGate abortPipeline: true
+        //        }
+        //    }
+        //}
+            //post {
+                // If Maven was able to run the tests, even if some of the test
+                // failed, record the test results and archive the jar file.
+            //    success {
+            //        junit '**/target/surefire-reports/TEST-*.xml'
+            //        archiveArtifacts 'target/*.jar'
+            //    }
+            //}
+        
+        
+    }
+}
